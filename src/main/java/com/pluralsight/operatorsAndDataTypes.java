@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class operatorsAndDataTypes {
     static void main() {
-        int exercise = 3;
+        int exercise = 4;
 
         if (exercise == 1) {
             int hours = 22;
@@ -65,7 +65,52 @@ public class operatorsAndDataTypes {
             pizzasNeeded = (slicesNeeded / slicesPerPizza) + ((slicesNeeded % slicesPerPizza) / (slicesNeeded % slicesPerPizza));
             System.out.println("For the party, we will need " + pizzasNeeded + " pizzas");
         } else if (exercise == 4) {
-            
+            /*
+            An ATM needs to dispense **387 euros**. It can dispense denominations of **50, 20, 10, 5, and 1 euro**.
+
+            Calculate how many of each denomination to give, using the fewest total pieces. Print the quantity of each.
+            */
+            int moneyToDispense = 387;
+            int startingMoney = moneyToDispense;
+            int fifties = moneyToDispense / 50;
+            moneyToDispense -= fifties * 50;
+            int twenties = moneyToDispense / 20;
+            moneyToDispense -= twenties * 20;
+            int tens = moneyToDispense / 10;
+            moneyToDispense -= tens * 10;
+            int fives = moneyToDispense / 5;
+            moneyToDispense -= fives * 5;
+            int ones = moneyToDispense;
+            moneyToDispense = startingMoney;
+
+            System.out.println("An amount of " + moneyToDispense + " euros will require:");
+            System.out.println(fifties + "x 50 euro bills,");
+            System.out.println(twenties + "x 20 euro bills,");
+            System.out.println(tens + "x 10 euro bills,");
+            System.out.println(fives + "x 5 euro bills,");
+            System.out.println("And " + ones + " ones.");
+
+            // stretch challenge
+            moneyToDispense = 999;
+
+            startingMoney = moneyToDispense;
+            fifties = moneyToDispense / 50;
+            moneyToDispense -= fifties * 50;
+            twenties = moneyToDispense / 20;
+            moneyToDispense -= twenties * 20;
+            tens = moneyToDispense / 10;
+            moneyToDispense -= tens * 10;
+            fives = moneyToDispense / 5;
+            moneyToDispense -= fives * 5;
+            ones = moneyToDispense;
+            moneyToDispense = startingMoney;
+
+            System.out.println("An amount of " + moneyToDispense + " euros will require:");
+            System.out.println(fifties + "x 50 euro bills,");
+            System.out.println(twenties + "x 20 euro bills,");
+            System.out.println(tens + "x 10 euro bills,");
+            System.out.println(fives + "x 5 euro bills,");
+            System.out.println("And " + ones + " ones.");
         }
     }
 }
