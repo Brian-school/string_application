@@ -4,7 +4,7 @@ import static java.lang.IO.println;
 
 public class operatorsAndDataTypes {
     static void main() {
-        int exercise = 7;
+        int exercise = 8;
 
         if (exercise == 1) {
             int hours = 22;
@@ -164,6 +164,38 @@ public class operatorsAndDataTypes {
             int ones = num;
 
             println(ones + "" + tens + "" + hund + "" + thou);
+        } else if (exercise == 8) {
+            int daysFromNow = 1000;
+            int day = (daysFromNow + 1) % 7;
+            switch (day) {
+                case 0:
+                    println("Today is Monday!");
+                    break;
+                case 1:
+                    println("Today is Tuesday");
+                    break;
+                case 2:
+                    println("Today is Wednesday");
+                    break;
+                case 3:
+                    println("Today is Thursday");
+                    break;
+                case 4:
+                    println("Today is Friday");
+                    break;
+                case 5:
+                    println("Today is Saturday");
+                    break;
+                case 6:
+                    println("Today is Sunday");
+                    break;
+                default:
+                    println("ERROR fallthrough case!");
+                    return;
+            }
+
+
+
         }
     }
 }
