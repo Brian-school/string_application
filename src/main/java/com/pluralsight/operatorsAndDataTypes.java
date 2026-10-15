@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class operatorsAndDataTypes {
     static void main() {
-        int exercise = 4;
+        int exercise = 5;
 
         if (exercise == 1) {
             int hours = 22;
@@ -57,7 +57,8 @@ public class operatorsAndDataTypes {
 
             System.out.println("For the party, we will need " + pizzasNeeded + " pizzas");
 
-            // **Stretch challenge:** Make your calculation work for **31 people**, **2 slices each**, and **6 slices per pizza** by changing only the input variables.
+            // **Stretch challenge:** Make your calculation work for **31 people**, **2 slices each**, and **6 slices per
+            // pizza** by changing only the input variables.
             people = 31;
             slicesPerPerson = 2;
             slicesPerPizza = 6;
@@ -111,6 +112,47 @@ public class operatorsAndDataTypes {
             System.out.println(tens + "x 10 euro bills,");
             System.out.println(fives + "x 5 euro bills,");
             System.out.println("And " + ones + " ones.");
+        } else if (exercise == 5) {
+            /*
+            You buy three items costing **12.95 euros**, **8.50 euros**, and **24.99 euros**.
+
+            1. Calculate the total cost.
+            2. Apply a **15% discount**.
+            3. Calculate the discounted cost per person when **3 people** split the bill equally.
+            4. Print the result.
+            */
+            double[] items = {12.95, 8.5, 24.99};
+            double totalCost = items[0] + items[1] + items[2];
+            double discount = totalCost * 0.15f;
+            totalCost -= discount;
+            double costForThree = totalCost / 3f;
+            System.out.println("The final cost per person for three people after a discount will be $" + costForThree);
+            // **Stretch challenge:** Calculate the total discount in cents and the remaining cents when the discounted
+            // total is split three ways. Decide what to do about cents that cannot be split equally.
+
+            // I already counted the discount in cents
+
+            double Pennies = costForThree / .01; // single floating point precision in reality would not make this an accurate solution
+            double splitPennies = costForThree - (Pennies * .01);
+            splitPennies *= 3;
+            System.out.println("There would be a remainder of $" + splitPennies + " after each paid their part");
+        } else if (exercise == 6) {
+            /*
+            A car travels **185 kilometres** in **2 hours and 30 minutes**.
+
+            1. Calculate the total travel time in hours.
+            2. Calculate the average speed in kilometres per hour.
+            3. Store the speed in a variable that can hold decimal values.
+            */
+
+            // The total travel time in hours is two and a half hours.
+            float averageSpeed = 185f / 2.5f;
+            int averageSpeedInt = (int) averageSpeed;
+
+            // The example expression shown in the worksheet would not work because to acheive the
+
+        } else if (exercise == 7) {
+            
         }
     }
 }
