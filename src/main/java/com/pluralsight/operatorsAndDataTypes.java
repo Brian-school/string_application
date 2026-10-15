@@ -1,8 +1,10 @@
 package com.pluralsight;
 
+import static java.lang.IO.println;
+
 public class operatorsAndDataTypes {
     static void main() {
-        int exercise = 5;
+        int exercise = 7;
 
         if (exercise == 1) {
             int hours = 22;
@@ -152,7 +154,16 @@ public class operatorsAndDataTypes {
             // The example expression shown in the worksheet would not work because to acheive the
 
         } else if (exercise == 7) {
-            
+            int num = 5837;
+            int thou = num / 1000;
+            num %= (thou * 1000);
+            int hund = num / 100;
+            num %= (hund * 100);
+            int tens = num / 10;
+            num %= (tens * 10);
+            int ones = num;
+
+            println(ones + "" + tens + "" + hund + "" + thou);
         }
     }
 }
